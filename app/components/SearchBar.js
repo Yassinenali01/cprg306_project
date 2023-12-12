@@ -77,9 +77,15 @@ export default function SearchBar({}) {
         {/* Weather Display */}
         {Object.keys(weather).length !== 0 ? (
         <div className="relative flex flex-col items-center justify-center text-white p-4 bg-blue-500 border-black rounded-lg mt-10 shadow-lg">
-        <button className="absolute top-2 right-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded-full">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-        </button>
+        <button 
+        className="absolute top-2 right-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-3 rounded-full"
+        onClick={() => {
+            setWeather({});
+            setSearch('');
+    }}
+>
+    X
+</button>
         <h1 className="text-4xl font-bold p-7"> {weather.name} </h1>
         <div className="flex flex-row items-center justify-center">
             <h1 className="text-3xl font-bold p-7"> {Math.round(weather.main.temp)}&deg;C </h1>
