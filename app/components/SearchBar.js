@@ -7,7 +7,6 @@ import { useState } from 'react'
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 
-
 export default function SearchBar({}) {
 
 
@@ -50,7 +49,7 @@ export default function SearchBar({}) {
     return (
 
         <div className="flex flex-col items-center justify-center bg-cover bg-center h-screen w-full" 
-        style={{backgroundImage: `url(https://littlevisuals.co/images/atlantic_ridge.jpg)`}}>
+      style={{backgroundImage: `url(/images/atlantic_ridge.jpg)`}}>
     
         <h1 className="text-4xl font-bold p-7"> Weather App </h1>
     
@@ -83,9 +82,9 @@ export default function SearchBar({}) {
             setWeather({});
             setSearch('');
     }}
->
-    X
-</button>
+        >
+            x
+        </button>
         <h1 className="text-4xl font-bold p-7"> {weather.name} </h1>
         <div className="flex flex-row items-center justify-center">
             <h1 className="text-3xl font-bold p-7"> {Math.round(weather.main.temp)}&deg;C </h1>
@@ -98,5 +97,5 @@ export default function SearchBar({}) {
     </div>
         ) : null}
     </div>
-    )
+    ) 
 }
