@@ -49,7 +49,7 @@ export default function SearchBar({}) {
     return (
 
         <div className="flex flex-col items-center justify-center bg-cover bg-center h-screen w-full" 
-      style={{backgroundImage: `url(/images/atlantic_ridge.jpg)`}}>
+        style={{backgroundImage: `url(https://littlevisuals.co/images/atlantic_ridge.jpg)`}}>
     
         <h1 className="text-4xl font-bold p-7"> Weather App </h1>
     
